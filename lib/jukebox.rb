@@ -38,16 +38,15 @@ end
 
 
 
-def play (songs)
-  puts "Please enter a song name or number:"
-  input = gets.chop
-  
-    if songs.keys.include?(input)
-      song = song[input]
-      
-      
-      puts "Invalid input, please try again"
-    
+def play(abc)
+  puts"Please enter a song name or number:"
+  xyz=gets.chomp
+  if xyz.to_i>0 and xyz.to_i<=abc.size
+    puts "PLaying #{abc[xyz.to_i-1]}"
+  elsif abc.include?(xyz)
+    puts "PLaying #{xyz}"
+  else
+    puts "Invalid input, please try again"
   end
 end
 
